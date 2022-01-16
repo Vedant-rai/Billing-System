@@ -9,7 +9,7 @@ This is a simple Invoice Generating System written in C
 - First Download Mingw from [here](https://www.mingw-w64.org/)
  - Then Follow the next Steps [here](https://www.geeksforgeeks.org/installing-mingw-tools-for-c-c-and-changing-environment-variable/)
  
-- Copy the code [Here](https://github.com/rishikesh-b/Billing-System/blob/main/BillingSytem.c)and Paste on any code editor.
+- Copy the code [Here](https://github.com/Vedant-rai/Billing-System/blob/main/Billing_system.c) and Paste on any code editor.
 
 
 
