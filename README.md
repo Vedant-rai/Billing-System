@@ -1,2 +1,2 @@
 # Billing System
- This is a billing system in c
+ This is a Billing system in c
