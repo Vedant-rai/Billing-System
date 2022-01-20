@@ -15,11 +15,11 @@ This is a simple Invoice Generating System written in C
 
 ##  Included Features
 
-- [x]  Options to `Create` `Account` and `Login`
-- [x]  Option to `Generate` Invoice
-- [x]  Option to `Search` Invoice
-- [x]  Option To `Show` all Invoice
-- [x]  Option To `Delete` A Invoice
+- :white_check_mark: Options to `Create` `Account` and `Login`
+- :white_check_mark: Option to `Generate` Invoice
+- :white_check_mark: Option to `Search` Invoice
+- :white_check_mark: Option to `Show` all Previous Invoices
+- :white_check_mark: Option to `Delete` Invoice
 
 ## Contributors
 
@@ -28,8 +28,9 @@ This is a simple Invoice Generating System written in C
 
 ## Note
 - Try Running The Code On `Vs Code Editor`
+- You Can Also Run The Code On `Xcode`
 - If you encounter any error while running the code just Copy the Code and 
   run on online compiler [Here](https://www.onlinegdb.com/online_c_compiler).
   
 
-- If you are using `Windows OS` use `System("cls")` instead of  `system("clear")` to Clear Previous Output.
+- If you are using `Windows OS` use `system("cls")` instead of  `system("clear")` to Clear Previous Output.
