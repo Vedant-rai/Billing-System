@@ -24,7 +24,8 @@ This is a simple Invoice Generating System written in C
 ## Contributors
 
 - [Rishikesh Bharadwaj](https://github.com/rishikesh-b)
-
+- [Kalyan](https://github.com/123kal/pps-mini-project-)
+- [Anshuman Sharma](https://github.com/Anshuman2719/billing-system)
 
 ## Note
 - Try Running The Code On `Vs Code Editor`
