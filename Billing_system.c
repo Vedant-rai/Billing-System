@@ -12,7 +12,7 @@ void generatebillheading(char name[50],char date[30],char time[30]) //three argu
     printf("\n\t|                       |\n\t|     ABC RESTAURANT    |");    // name of the restaurant
     printf("\n\t|                       |");
     printf("\n        '-----------------------'\n"); 
-    
+
     printf("\n-----------------------------------------\n");
     printf("\nDate:%s",date);
     printf("\tTime:%s",time);
@@ -110,8 +110,8 @@ int main()
 
         initscr();
         noecho();
-        char passwd[10];
-        int p=0; char ch;
+        char passwd[10],ch;
+        int p=0;
         printw("Enter Password: ");
         while(1)
         {
