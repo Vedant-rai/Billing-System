@@ -2,10 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<unistd.h>
-<<<<<<< HEAD
 #include<ncurses.h>
-=======
->>>>>>> parent of 81ea3ff (Added ncurses)
 
 void generatebillheading(char name[50],char date[30],char time[30]) //three arguments for name, date and time
 {
@@ -15,7 +12,7 @@ void generatebillheading(char name[50],char date[30],char time[30]) //three argu
     printf("\n\t|                       |\n\t|     ABC RESTAURANT    |");    // name of the restaurant
     printf("\n\t|                       |");
     printf("\n        '-----------------------'\n"); 
-
+    
     printf("\n-----------------------------------------\n");
     printf("\nDate:%s",date);
     printf("\tTime:%s",time);
@@ -82,7 +79,9 @@ struct details
 };
 
 int main()
-{
+{   
+    
+
     FILE *lg;       //declaring file pointer for login details
     int option;
     char name1[30],psword[30],cpsword[30];
@@ -108,12 +107,11 @@ int main()
         printf("\n\nCreate your username:\t");
         fgets(detail.username,30,stdin);
         detail.username[strlen(detail.username)-1]=0;
-<<<<<<< HEAD
 
         initscr();
         noecho();
-        char passwd[10],ch;
-        int p=0;
+        char passwd[10];
+        int p=0; char ch;
         printw("Enter Password: ");
         while(1)
         {
@@ -167,13 +165,6 @@ int main()
         cpsword[p]='\0';
         endwin();
         strcpy(detail.password,passwd);               
-=======
-        printf("\n\nEnter your password:\t");
-        fgets(detail.password,30,stdin);
-        detail.password[strlen(detail.password)-1]=0;
-        printf("\n\nConfirm password:\t");
-        scanf("%s",cpsword);                // temporary character array to check password
->>>>>>> parent of 81ea3ff (Added ncurses)
         if(strcmp(detail.password,cpsword)==0){     //strcmp returns 0 if strings match
         printf("\n\n\tDo You want to save the details?[y/n]\t");
         scanf("%s",&Saveinfo);
@@ -201,10 +192,38 @@ int main()
         printf("\n\nEnter Your Username:\t");
         fgets(name1,30,stdin);          // to take string as an input from user
         name1[strlen(name1)-1]=0;       //to assign 0 at the end of string
-        printf("\n\nEnter Your Password:\t");
-        fgets(psword,30,stdin);
-        psword[strlen(psword)-1]=0;
-
+        initscr();
+        noecho();
+        char passwd[10];
+        int p=0; 
+        clear();
+        printw("Enter Your Password: ");
+        while(1)
+        {
+          ch=getch();
+          if(ch==10)
+          {
+              break;
+          }
+          else if(ch==127)
+          {
+              if(p>0)
+              {
+                  p--;
+                  passwd[p]='\0';
+                  printw("\b \b");
+              }
+          }
+          else
+          {
+              passwd[p]=ch;
+              p++;
+              printw("*");
+          }
+        }
+        passwd[p]='\0';
+        endwin();
+        strcpy(psword,passwd);
             lg =fopen("logindetails.dat","r+");         //open login file in read mode
             while(fread(&detmatch,sizeof(struct details),1,lg))     //to read data from file one by one
             {   
