@@ -4,8 +4,6 @@
 #include<unistd.h>
 #include<ncurses.h>
 
-
-
 void generatebillheading(char name[50],char date[30],char time[30]) //three arguments for name, date and time
 {
     printf("\n\n");
