@@ -295,7 +295,7 @@ int main()
                             scanf("%s",&SaveBill);
                     
                             if(SaveBill=='y')  // for saving the bill file management
-                            {   sprintf(usrfile,"%s.dat",name1);        // to store file name as user name in a string
+                            {   snprintf(usrfile, sizeof(usrfile),"%s.dat",name1);        // to store file name as user name in a string
                                 fp=fopen(usrfile,"a+"); // ab for creating the file
                                 fwrite(&ord,sizeof(struct orders),1,fp);
                                 if(fwrite!=0){
@@ -310,7 +310,7 @@ int main()
                             case 2:     //to show all invoices
 
                             system("clear");
-                            sprintf(usrfile,"%s.dat",name1);
+                            snprintf(usrfile, sizeof(usrfile),"%s.dat",name1);
                             if(fp =fopen(usrfile,"r+"))      // if file exists
                             {   printf("\n\t*Your Previous Invoices*");
                                 while (fread(&order,sizeof(struct orders),1,fp))    // to read data from file one by one
@@ -351,7 +351,7 @@ int main()
                             fgets(name,50,stdin);       // taking name of customer
                             name[strlen(name)-1]=0;     //to assign 0 at the end of string
                             system("clear");
-                            sprintf(usrfile,"%s.dat",name1);
+                            snprintf(usrfile, sizeof(usrfile),"%s.dat",name1);
                             if(fp =fopen(usrfile,"r+"))     //if file exists
                             {   printf("\n\t*Invoice of %s*",name);
                                 while (fread(&ords,sizeof(struct orders),1,fp))     // to read data from file one by one
@@ -388,9 +388,9 @@ int main()
                             fgets(name,50,stdin);
                             name[strlen(name)-1]=0;
                             system("clear");
-                            sprintf(usrfile,"%s.dat",name1);
+                            snprintf(usrfile, sizeof(usrfile),"%s.dat",name1);
                             if(fp = fopen(usrfile,"r")){       //if file exists
-                            sprintf(usrfile1,"%stemp.dat",name1);
+                            snprintf(usrfile1, sizeof(usrfile1),"%stemp.dat",name1);
                             fp1 = fopen(usrfile1,"w");     //open temporary file in write mode to store data
                             found=0;
                             while(fread(&ord,sizeof(struct orders),1,fp))    // to read data from file one by one
